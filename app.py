@@ -27,7 +27,6 @@ def write_review():
 
     return jsonify({'msg': '저장완료!'})
 
-
 @app.route('/review', methods=['GET'])
 def read_reviews():
     reviews = list(db.bookreview.find({}, {'_id': False}))
